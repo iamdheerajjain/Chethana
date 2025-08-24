@@ -1,35 +1,17 @@
 {
   "name": "chethana-portfolio",
   "version": "1.0.0",
-  "description": "Personal portfolio website for Chethana LN - Full Stack Developer",
+  "description": "Chethana's Portfolio Website",
   "main": "index.html",
   "scripts": {
-    "start": "python -m http.server 8000",
-    "serve": "npx serve .",
-    "dev": "npx live-server --port=8000",
-    "build": "echo 'No build process needed for static site'",
-    "deploy": "echo 'Deploy to your preferred hosting service'"
+    "start": "echo 'Static site - open index.html in browser'"
   },
   "keywords": [
     "portfolio",
-    "full-stack-developer",
-    "web-development",
-    "responsive-design",
-    "html",
-    "css",
-    "javascript"
+    "web",
+    "developer",
+    "frontend"
   ],
-  "author": "Chethana LN",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/chethana-portfolio.git"
-  },
-  "homepage": "https://yourusername.github.io/chethana-portfolio",
-  "devDependencies": {
-    "live-server": "^1.2.2"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  }
+  "author": "Chethana",
+  "license": "MIT"
 }

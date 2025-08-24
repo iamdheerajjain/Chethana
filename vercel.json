@@ -2,10 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "*.html",
+      "src": "**/*",
       "use": "@vercel/static"
     }
   ],
+  "functions": {},
+  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false
 }

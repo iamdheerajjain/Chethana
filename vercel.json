@@ -6,7 +6,6 @@
       "use": "@vercel/static"
     }
   ],
-  "functions": {},
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false

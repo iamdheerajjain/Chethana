@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   aboutStats.forEach((stat) => {
-    stat.classList.add("scale-on-scroll");
+    // Removed scale-on-scroll class to prevent conflicts with hover effects
     observer.observe(stat);
   });
 

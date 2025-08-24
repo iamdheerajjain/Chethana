@@ -474,16 +474,30 @@ body {
   gap: 2rem;
 }
 
+/* Ensure stat items have clean, smooth hover effects */
 .stat-item {
   text-align: center;
   padding: 2rem;
   background: linear-gradient(135deg, #f0e6ff 0%, #e6d9ff 100%);
   border-radius: 15px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  /* Ensure no conflicting transforms */
+  transform: none;
+  /* Ensure smooth transitions */
+  will-change: transform, box-shadow, background, border-color;
+  /* Override any conflicting animations */
+  animation: none;
 }
 
 .stat-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.2);
+  background: linear-gradient(135deg, #e6d9ff 0%, #d9ccff 100%);
+  /* Ensure no conflicting animations on hover */
+  animation: none;
 }
 
 .stat-number {
@@ -491,11 +505,21 @@ body {
   font-weight: 700;
   color: #667eea;
   margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
 }
 
 .stat-label {
   color: #666;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+  color: #5a67d8;
+}
+
+.stat-item:hover .stat-label {
+  color: #4a5568;
 }
 
 /* Skills Section */
@@ -1045,9 +1069,7 @@ body {
   /* Removed complex animation to prevent lag */
 }
 
-.stat-item:hover {
-  animation: scaleIn 0.6s ease-out;
-}
+/* Removed conflicting animation */
 
 /* Continuous floating animations */
 @keyframes gentleFloat {
@@ -1240,15 +1262,9 @@ html {
   width: 120px;
 }
 
-/* Enhanced stat items */
-.stat-item {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Removed conflicting transition */
 
-.stat-item:hover {
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-}
+/* Removed conflicting hover effect */
 
 /* Enhanced skill items */
 .skill-item {
@@ -1460,13 +1476,9 @@ html {
   box-shadow: 0 15px 35px rgba(102, 126, 234, 0.1);
 }
 
-.about-stats .stat-item {
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+/* Removed conflicting transition */
 
-.about-stats .stat-item:hover {
-  transform: scale(1.05);
-}
+/* Removed conflicting hover effect */
 
 .hero-buttons .btn {
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
